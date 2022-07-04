@@ -34,9 +34,34 @@ input,
 [tabindex] {
     outline: none;
     border: none;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+
+//Custom tippy tolltip
+
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+        top: -8px;
+    }
 }
