@@ -9,12 +9,9 @@ import {
     faCircleQuestion,
     faEarthAsia,
     faEllipsisVertical,
-    faMagnifyingGlass,
     faPlus,
     faSpinner,
     faKeyboard,
-    faMessage,
-    faPaperPlane,
     faUser,
     faCoins,
     faGear,
@@ -27,6 +24,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/Layout/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { InboxIcon, MessageIcon, SearchIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -142,7 +141,7 @@ function Header() {
                         </button>
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -153,14 +152,14 @@ function Header() {
                     </Button>
                     {currentUser ? (
                         <>
-                            <Tippy content="Message">
-                                <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faPaperPlane} />
+                            <Tippy content="Inbox">
+                                <button className={cx('action-btn', 'action-btn-left')}>
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
-                            <Tippy content="Inbox">
+                            <Tippy content="Message">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -171,8 +170,8 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEM} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/656e924772db0f5ece62fd39d4718b80~c5_100x100.jpeg?x-expires=1657080000&x-signature=f2ZnEUtnjVCr%2FoCIL8LfH7NMIBU%3D"
+                            <Image
+                                src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/879a5a095170a1789bf14407df6e3659.jpeg?x-expires=1657105200&x-signature=p5N73MBNdxELrZgaQ%2BDBLKvuMVk%3D"
                                 className={cx('user-avatar')}
                                 alt="Anh lam"
                             />
