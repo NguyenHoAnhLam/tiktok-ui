@@ -4,6 +4,7 @@
     --primary: #fe2c55;
     --text-color: rgba(22, 24, 35, 1);
     --white: #fff;
+    --font-family: 'Proxima', sans-serif;
 
     //Default layout
     --default-layout-header-height: 60px;
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Proxima', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -33,7 +34,7 @@ input,
 [tabindex] {
     outline: none;
     border: none;
-    font-family: 'Proxima', sans-serif;
+    font-family: var(--font-family);
 }
 
 a[href] {
