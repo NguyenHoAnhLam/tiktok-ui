@@ -53,6 +53,31 @@ const MENU_ITEM = [
                     code: 'ch',
                     title: 'China',
                 },
+                {
+                    type: 'language',
+                    code: 'in',
+                    title: 'Indonesia',
+                },
+                {
+                    type: 'language',
+                    code: 'it',
+                    title: 'Italya',
+                },
+                {
+                    type: 'language',
+                    code: 'ro',
+                    title: 'Romania',
+                },
+                {
+                    type: 'language',
+                    code: 'br',
+                    title: 'Brasil',
+                },
+                {
+                    type: 'language',
+                    code: 'ma',
+                    title: 'Malaysia',
+                },
             ],
         },
     },
